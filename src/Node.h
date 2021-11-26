@@ -1,17 +1,25 @@
 #ifndef SINGLYLINKEDLIST_NODE_H
 #define SINGLYLINKEDLIST_NODE_H
 
+template<typename T>
 class Node {
 private:
-    int data;
+    T data;
     Node * next;
 public:
-    Node(int d, Node * n);
-    ~Node();
-    void Update_Pointer(Node * n);
-    int Get_Value();
+    Node(T d, Node * n) {
+        data= d;
+        next= n;
+    }
+    ~Node() = default;
+    void Update_Pointer(Node * n) {next=n;}
+    T Get_Value() {
+        return data;
+    }
 
-    Node *Get_Next();
+    Node *Get_Next() {
+        return next;
+    }
 };
 
 

@@ -5,7 +5,7 @@
 using namespace std;
 
 int main() {
-    List list;
+    List<int> list;
 
     Add_Item_To_Begin(&list, 1);
     list.Add_Item_To_End(2);
