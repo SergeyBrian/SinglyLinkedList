@@ -7,6 +7,7 @@ private:
     Node * next;
 public:
     Node(int d, Node * n);
+    Node(const Node &obj);
     ~Node();
     void Update_Pointer(Node * n);
     int Get_Value();

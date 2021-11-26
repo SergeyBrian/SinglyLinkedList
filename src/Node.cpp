@@ -18,3 +18,7 @@ Node *Node::Get_Next() {
 int Node::Get_Value() {
     return data;
 }
+
+Node::Node(const Node &obj) {
+
+}

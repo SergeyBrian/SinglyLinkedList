@@ -47,3 +47,7 @@ void List::Extract_Item_From_End() {
         }
     }
 }
+
+List::List(const List &obj) {
+
+}

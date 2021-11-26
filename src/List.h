@@ -8,6 +8,7 @@ private:
     Node * root;
 public:
     List();
+    List(const List &obj);
     ~List();
 
     friend void Add_Item_To_Begin(List * list, int data);
