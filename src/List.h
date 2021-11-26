@@ -27,13 +27,11 @@ public:
         delete list->root;
         list->root = tmp;
     }
-    void Add_Item_To_End(int data) {
+    void Add_Item_To_End(T data) {
         if (root == nullptr)
             root = new Node<T>(data, nullptr);
         else {
-            Node<T> * tmp = root;
-            while (tmp->Get_Next() != nullptr)
-                tmp=tmp->Get_Next();
+            Node<T> * tmp = Get_Last();
             tmp->Update_Pointer(new Node<T>(data, nullptr));
         }
     }
@@ -50,6 +48,16 @@ public:
                 tmp->Update_Pointer(nullptr);
             }
         }
+    }
+    Node<T> * Get_Last() {
+        Node<T> * tmp = root;
+        while (tmp->Get_Next() != nullptr)
+            tmp=tmp->Get_Next();
+        return tmp;
+    }
+
+    Node<T> * Get_First() {
+        return root;
     }
 };
 
